@@ -2,87 +2,14 @@
   <head>
     <title>Javascript Task Three</title>
     <style>
-      body {
-        font-family: sans-serif;
-      }
-
-      #translator {
-        width: 600px;
-        border: 1px solid #ccc;
-        padding: 10px;
-      }
-
-      #Video-list {
-        width: 200px;
-        border: 1px solid #ccc;
-        padding: 10px;
-      }
-      .navbar {
-        width: 622px;
-        overflow: hidden;
-        background-color: #333;
-      }
-
-      .navbar a {
-        float: left;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      .subnav {
-        float: left;
-        overflow: hidden;
-      }
-
-     .subnav .subnavbtn {
-        font-size: 16px;
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-       }
-
-     .navbar a:hover, .subnav:hover .subnavbtn {
-        background-color: red;
-       }
-
-     .subnav-content {
-        display: none;
-        position: absolute;
-        left: 0;
-        background-color: red;
-        width: 100%;
-        z-index: 1;
-       }
-
-    .subnav-content a {
-       float: left;
-       color: white;
-       text-decoration: none;
-      }
-
-    .subnav-content a:hover {
-       background-color: #eee;
-       color: black;
-      }
-
-   .subnav:hover .subnav-content {
-      width: 622px;
-      display: block;
-
+     <link rel = "stylesheet" href = "JavaScript_video_gallery.css">
     </style>
   
     </head>
     <body>
       <h1>JavaScript Video Gallery</h1>
       <div class="navbar">
-             <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Main.html">Home</a>
+            <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Main.html">Home</a>
             <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Skills.html">Skills</a>
             <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Education.html">Education</a>
 <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Gallery.html">Gallery</a>
@@ -106,12 +33,12 @@
     </div>
 
     <script>
-      const signLanguageSelector = document.querySelector('#video-gallery');
+      const videogallerySelector = document.querySelector('#video-gallery');
       const videoSource = document.querySelector('#video-source');
 
       signLanguageSelector.addEventListener('change', (e) => {
-        const selectedSignLanguage = e.target.value;
-        switch (selectedSignLanguage) {
+        const selectvideogallery = e.target.value;
+        switch (selectedvideogallery) {
           case 'Video 1':
             videoSource.src = 'video1.mp4';
             break;
