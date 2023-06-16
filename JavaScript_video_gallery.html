@@ -2,50 +2,57 @@
   <head>
     <title>Javascript Task Three</title>
      <link rel = "stylesheet" href = "JavaScript_video_gallery.css">
-    </head>
+     </head>
     <body>
-      <h1>JavaScript Video Gallery</h1>
+      <h1> Bangla Sign Language Translator</h1>
       <div class="navbar">
-            <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Main.html">Home</a>
-            <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Skills.html">Skills</a>
-            <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Education.html">Education</a>
-<a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Gallery.html">Gallery</a>
-            <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Project.html">Project</a>
-            <a href="file:///C:/Users/User/Desktop/HTML_and_CSS/Contact.html">Contact</a>
+  <a href="#home">বর্ণমালা</a>
+  <div class="subnav">
+    <button class="subnavbtn">জনপ্রিয় শব্দ <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#Task One">শব্দ এক</a>
+      <a href="#Task Two">শব্দ দুই</a>
+      <a href="#Task Three">শব্দ তিন</a>
+      <a href="#Task Four">শব্দ চার</a>
+      <a href="#Task Five">শব্দ পাঁচ</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">আইসিটি শব্দকোষ <i class="fa fa-caret-down"></i></button>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">বিষয় <i class="fa fa-caret-down"></i></button>
+  </div>
+  <a href="#contact">জ্ঞানভাণ্ডার </a>
 </div>
-    <div id="translator">
-      <p>Select a sign from the list to view the video.</p>
+     <div id="translator">
+      <p>ভিডিও দেখতে তালিকা থেকে ইশারা ভাষা নির্বাচন করুন।</p> 
       <div id="video-list">
         <select id="video-gallery">
-          <option value="Video 1">Video 1</option>
-          <option value="Video 2">Video 2</option>
-          <option value="Video 3">Video 3</option>
+          <option value="C:\Users\User\Desktop\sign_language_translator\college.mp4">কলেজ</option> 
+          <option value="C:\Users\User\Desktop\sign_language_translator\school.mp4">স্কুল</option>
+          <option value="C:\Users\User\Desktop\sign_language_translator\university.mp4">বিশ্ববিদ্যালয়</option>
         </select>
       </div>
       <div id="video-container">
-        <video width="600" height="400" controls>
-          <source src="" id="video-source" type="video/mp4">
-        </video>
+        <iframe id="player" width="600" height="400" src="Videos/Attack_on_Titan.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          
+      </iframe>
       </div>
     </div>
 
     <script>
-      const videogallerySelector = document.querySelector('#video-gallery');
-      const videoSource = document.querySelector('#video-source');
+      var select = document.getElementById('video-gallery');
+      var player = document.getElementById('player');
 
-      signLanguageSelector.addEventListener('change', (e) => {
-        const selectvideogallery = e.target.value;
-        switch (selectedvideogallery) {
-          case 'Video 1':
-            videoSource.src = 'video1.mp4';
-            break;
-          case 'Video 2':
-            videoSource.src = 'video 2.mp4';
-            break;
-          case 'Video 3':
-            videoSource.src = 'video 3.mp4';
-            break;
-        }
+      // Event handler when the list changes
+      select.addEventListener("change", function() {
+  
+        var selectedOption = select.options[select.selectedIndex];
+     
+        var videoUrl = selectedOption.value;
+  
+        player.src = videoUrl;
       });
     </script>
   </body>
