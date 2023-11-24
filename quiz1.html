@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Введение в автоматизированное тестирование</title>
+	 <link rel="stylesheet" href="quiz1.css">
+</head>
+<body>
+    <h1>Quiz 1</h1>
+    <form id="quizForm">
+        <ol>
+            <li>
+                <h3>HTTP Stands for (HTTP означает) ____ </h3>
+                <input type="radio" name="q1" value="one">HyperText Transformer Protocol
+                <input type="radio" name="q1" value="two">HyperText Transfer Protocol
+                <input type="radio" name="q1" value="three">HyperTest Transfer Protocol
+                <input type="radio" name="q1" value="four">HyperText Test Protocol
+            </li>
+            <li>
+                <h3>Which of the following options is not an HTTP method?(Какой из следующих вариантов не является методом HTTP?)</h3>
+                <input type="radio" name="q2" value="one">POST
+                <input type="radio" name="q2" value="two">PATCH
+                <input type="radio" name="q2" value="three">PET
+                <input type="radio" name="q2" value="four">GET
+            </li>
+            <li>
+                <h3>PUT operations are said to be (Говорят, что операции PUT)- </h3>
+                <input type="radio" name="q3" value="one">Unsafe but idempotent (Небезопасно, но идемпотентно).
+                <input type="radio" name="q3" value="two">Unsafe and idempotent (Небезопасный и идемпотентный).
+                <input type="radio" name="q3" value="three">Safe but idempotent (Безопасный, но идемпотентный).
+                <input type="radio" name="q3" value="four">Unsafe but  non-idempotent (Небезопасно, но неидемпотентно).
+            </li>
+            <li>
+                <h3>The most commonly used HTTP method is (Наиболее часто используемый HTTP-метод)- </h3>
+                <input type="radio" name="q4" value="one">GET
+                <input type="radio" name="q4" value="two">PUT
+                <input type="radio" name="q4" value="three">POST
+                <input type="radio" name="q4" value="four">DELETE
+            </li>
+            <li>
+                <h3>REST stands for (REST означает) ___ </h3>
+                <input type="radio" name="q5" value="one">Representation State Transfer
+                <input type="radio" name="q5" value="two">Representation Status Transfer
+                <input type="radio" name="q5" value="three">Representational Statue Transfer
+                <input type="radio" name="q5" value="four">Representational State Transfer
+            </li>
+			<li>
+                <h3>Which of the following testing cannot be automated? (Какой из следующих видов тестирования нельзя автоматизировать?) </h3>
+                <input type="radio" name="q6" value="one">Regression Testing (Регрессионное тестирование)
+                <input type="radio" name="q6" value="two">Exploratory Testing (Исследовательское тестирование)
+                <input type="radio" name="q6" value="three">End-to-End Testing (Е2Е-тестирование)
+                <input type="radio" name="q6" value="four">Unit Testing (Модульное тестирование)
+            </li>
+        </ol>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="results"></div>
+	
+	<!-- Script -->
+<script src="quiz1.js"></script>
+
+  
+</body>
+</html>
